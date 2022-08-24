@@ -1,4 +1,3 @@
-// const Prism = require("./prism");
 
 console.log("Postman");
 
@@ -85,11 +84,12 @@ let Submit = document.getElementById("Submit");
 Submit.addEventListener("click", (e) => {
   e.preventDefault();
   // Show Please Wait in the Response Box To request Patience from the user
-  document.getElementById("ResponseJasonText").value =
-    "Please Wait  Fetching Your Response ....";
 
-  // document.getElementById("ResponsePrism").innerHTML =
+  // document.getElementById("ResponseJasonText").value =
   //   "Please Wait  Fetching Your Response ....";
+
+  document.getElementById("ResponsePrism").innerHTML =
+    "Please Wait  Fetching Your Response ....";
 
   // Fetch all the values user has Entered value
 
@@ -137,8 +137,8 @@ Submit.addEventListener("click", (e) => {
     })
       .then((Response) => Response.text())
       .then((text) => {
-        document.getElementById("ResponseJasonText").value = text;
-        // document.getElementById("ResponsePrism").innerHTML = text;
+        // document.getElementById("ResponseJasonText").value = text;
+        document.getElementById("ResponsePrism").innerHTML = text;
 
       });
   } else {
@@ -151,8 +151,8 @@ Submit.addEventListener("click", (e) => {
     })
       .then((Response) => Response.text())
       .then((text) => {
-        document.getElementById("ResponseJasonText").value = text;
-        // document.getElementById("ResponsePrism").innerHTML = text;
+        // document.getElementById("ResponseJasonText").value = text;
+        document.getElementById("ResponsePrism").innerHTML = text;
       });
   }
 });
